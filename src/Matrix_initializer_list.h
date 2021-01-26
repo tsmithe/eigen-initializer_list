@@ -40,7 +40,8 @@
   matrix given a initializer list of the wrong size.
 
  **/
-EIGEN_STRONG_INLINE Matrix(std::initializer_list<double > initlist) : Base()
+template<typename T>
+EIGEN_STRONG_INLINE Matrix(std::initializer_list<T> initlist) : Base()
 {
 
   Base::_check_template_params();
@@ -73,7 +74,8 @@ EIGEN_STRONG_INLINE Matrix(std::initializer_list<double > initlist) : Base()
   matrix given a initializer list of the wrong size.
 
  **/
-EIGEN_STRONG_INLINE Matrix(std::initializer_list<std::initializer_list<double> > initlist) : Base()
+template<typename T>
+EIGEN_STRONG_INLINE Matrix(std::initializer_list<std::initializer_list<T> > initlist) : Base()
 {
   Base::_check_template_params();
   int rows = initlist.size();
